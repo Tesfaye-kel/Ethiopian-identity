@@ -27,17 +27,18 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // If we've scrolled more than 20px, set isScrolled to true
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      // Set isScrolled based on the scroll position.
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const getFlagSizeClass = (flagId) => {
+    if (isScrolled) return 'w-8 h-5';
+    return flagId === 'ethio' ? 'w-14 h-9' : 'w-10 h-6';
+  };
 
   return (
     <header 
@@ -47,12 +48,12 @@ function Header() {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Title: Shrinks slightly when scrolled */}
-        <h1 className={`font-extrabold text-emerald-800 tracking-tight shrink-0 transition-all duration-300 ${
-          isScrolled ? 'text-2xl' : 'text-3xl'
-        }`}>
-          Ethiopian Identity
-        </h1>
-        
+      <h1
+  className={`font-extrabold text-emerald-800 tracking-tight shrink-0 transition-all duration-300 
+  ${isScrolled ? 'text-2xl -mt-1' : 'text-3xl mt-1'}`}
+>
+  Ethiopian Identity
+</h1>
         {/* Flags Container */}
         <div className="flex-1 mx-8 overflow-x-auto max-w-2xl">
           <div className="flex justify-between items-center min-w-max space-x-4">
@@ -61,9 +62,7 @@ function Header() {
                 <img 
                   src={flag.image} 
                   alt={flag.name} 
-                  className={`object-cover rounded shadow-sm transition-all duration-300 ${
-                    isScrolled ? 'w-8 h-5' : (flag.id === 'ethio' ? 'w-14 h-9' : 'w-10 h-6')
-                  }`} 
+                  className={`object-cover rounded shadow-sm transition-all duration-300 ${getFlagSizeClass(flag.id)}`} 
                 />
                 <span className="text-[10px] italic text-stone-500 mt-1">{flag.name}</span>
               </div>
