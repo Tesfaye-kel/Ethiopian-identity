@@ -16,7 +16,9 @@ function Header() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 border-b border-stone-200 bg-gradient-to-r from-stone-200/90 via-stone-100/95 to-stone-200/90 backdrop-blur-xl animate-pulse-subtle transition-all duration-500 hover:-translate-y-1 active:translate-y-0 shadow-lg shadow-stone-400/30 ${
+      className={`fixed top-0 left-0 right-0 z-50 border-b border-stone-200
+      bg-gradient-to-r from-stone-200/90 via-stone-100/95 to-stone-200/90 backdrop-blur-xl animate-pulse-subtle transition-all duration-500 
+      hover:-translate-y-1 active:translate-y-0 shadow-lg shadow-stone-400/30 ${
         isScrolled ? 'py-1.5 shadow-xl shadow-stone-500/40' : 'py-4 shadow-xl shadow-stone-400/30'
       }`}
     >
