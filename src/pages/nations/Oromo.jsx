@@ -1,126 +1,116 @@
-
 import React from 'react';
 
 const Oromo = () => {
   return (
-    <div className="bg-[#fdfcf8] min-h-screen text-stone-900 font-serif">
-      {/* SECTION 1: HERO / COVER */}
-      <section className="relative h-[90vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden">
-        <h1 className="text-8xl md:text-[12rem] font-black uppercase tracking-tighter leading-none z-10">
-          Oromia
-        </h1>
-        <p className="text-xl md:text-2xl mt-4 max-w-2xl font-light italic z-10">
-          "The Heart of the Horn: Exploring the cradle of mankind, the birthplace of coffee, and the home of democracy."
-        </p>
-        {/* [INSERT PHOTO_1: Hero Landscape - e.g., Bale Mountains] */}
-        <div className="absolute inset-0 opacity-20">
-          <img 
-            src="INSERT_PHOTO_1_URL" 
-            className="w-full h-full object-cover" 
-            alt="Hero Background" 
-          />
+    <div className="h-screen w-screen fixed inset-0 bg-gradient-to-br from-amber-50 via-stone-50 to-emerald-50 text-slate-900 font-serif antialiased overflow-hidden">
+      {/* Parallax Hero */}
+      <section className="h-screen relative flex items-center justify-center text-center px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/60 to-amber-900/40" />
+        <div className="relative z-20 w-full max-w-6xl mx-auto p-8">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-wider mb-4 bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent drop-shadow-2xl animate-fade-in">
+            Oromia
+          </h1>
+          <p className="text-2xl md:text-3xl lg:text-4xl font-light leading-loose max-w-4xl mx-auto bg-white/80 backdrop-blur-sm p-6 rounded-3xl shadow-2xl">
+            The heartbeat of Ethiopia – largest ethnic group with ancient Gadaa democracy, legendary warriors, Olympic champions, and unbreakable spirit.
+          </p>
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-6 py-20">
-        
-        {/* SECTION 2: IDENTITY & ORIGINS */}
-        <div className="grid md:grid-cols-3 gap-12 mb-24">
-          <div className="md:col-span-1">
-            <h2 className="text-4xl font-bold uppercase border-b-4 border-amber-600 mb-6">Origins</h2>
-            <ul className="space-y-4 text-lg leading-relaxed">
-              <li><strong>Cradle of Mankind:</strong> Home to some of the oldest human fossils ever discovered.</li>
-              <li><strong>Cushitic Roots:</strong> A proud lineage within the Afro-Asiatic family tree.</li>
-              <li><strong>Afaan Oromoo:</strong> A powerhouse language, widely spoken across the African continent.</li>
-              <li><strong>Waaqeffanna:</strong> Ancient monotheistic belief in Waaqa, the supreme creator.</li>
-            </ul>
-          </div>
-          <div className="md:col-span-2">
-            {/* [INSERT PHOTO_2: Cultural Artifact or Portrait] */}
-            <img 
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Ra6q1zE4WYSZSOewYclgTJ-zhUqYuS7fjA&s" 
-              className="w-full h-[400px] object-cover rounded-sm shadow-2xl" 
-              alt="Oromo Culture" 
-            />
-          </div>
-        </div>
-
-        {/* SECTION 3: THE GADAA SYSTEM (Special Feature) */}
-        <section className="bg-stone-900 text-stone-100 p-12 rounded-sm mb-24">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h2 className="text-5xl font-black mb-6 text-amber-500">The Gadaa System</h2>
-              <p className="text-xl leading-relaxed opacity-90">
-                Oromia gifted the world one of the oldest democratic governance structures. 
-                The Gadaa system organizes society into age-sets, ensuring a peaceful 
-                rotation of power every eight years—a prehistoric blueprint for modern democracy.
-              </p>
+      {/* Gadaa Democracy - Full Width */}
+      <section className="h-screen flex items-center justify-between px-8 py-20 bg-gradient-to-r from-slate-900/90 to-stone-900/90 text-white">
+        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
+          <div className="space-y-8">
+            <h2 className="text-5xl md:text-6xl font-black uppercase tracking-widest bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent">
+              Gadaa System
+            </h2>
+            <p className="text-xl md:text-2xl leading-loose mb-12 max-w-lg opacity-95">
+              World's most sophisticated indigenous democracy. 500+ years of peaceful power rotation through age-sets. UNESCO World Heritage.
+            </p>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="p-8 bg-white/10 rounded-3xl backdrop-blur-xl border border-white/20 hover:bg-white/20 transition-all">
+                <div className="text-5xl mb-4">⚖️</div>
+                <h4 className="text-2xl font-bold uppercase mb-2">8-Year Cycles</h4>
+                <p>Leadership rotates every 8 years</p>
+              </div>
+              <div className="p-8 bg-white/10 rounded-3xl backdrop-blur-xl border border-white/20 hover:bg-white/20 transition-all">
+                <div className="text-5xl mb-4">⭕</div>
+                <h4 className="text-2xl font-bold uppercase mb-2">Peaceful Transfer</h4>
+                <p>No violence - community consensus</p>
+              </div>
             </div>
-            {/* [INSERT PHOTO_3: Gadaa Ceremony or Symbol] */}
-            <img 
-              src="https://www.ethioeyewitness.com/wp-content/uploads/2024/06/Guji-Oromo-1-936x624-1.webp" 
-              className="grayscale hover:grayscale-0 transition duration-500 rounded-lg" 
-              alt="Gadaa System" 
-            />
           </div>
-        </section>
-
-        {/* SECTION 4: GEOGRAPHY & ECONOMY (Three Column Grid) */}
-        <h2 className="text-4xl font-bold uppercase text-center mb-12">Landscape & Life</h2>
-        <div className="grid md:grid-cols-3 gap-8 mb-24">
-          <div className="p-6 border border-stone-200 bg-white">
-            <h3 className="font-bold text-xl mb-3 text-amber-700">The Breadbasket</h3>
-            <p>From fertile highland soil to vast livestock herds, Oromia feeds the nation of Ethiopia.</p>
-          </div>
-          <div className="p-6 border border-stone-200 bg-white">
-            <h3 className="font-bold text-xl mb-3 text-amber-700">Rift Valley Lakes</h3>
-            <p>A geological wonder featuring stunning lakes and the powerful Awash River.</p>
-          </div>
-          <div className="p-6 border border-stone-200 bg-white">
-            <h3 className="font-bold text-xl mb-3 text-amber-700">Black Gold</h3>
-            <p>Kaffa is the legendary home of Arabica coffee, Oromia's greatest gift to world culture.</p>
+          <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl lg:rotate-3 hover:rotate-0 transition-all">
+            <img src="https://images.unsplash.com/photo-1621346655624-12d42f47a6fb?w=800" className="w-full h-full object-cover" alt="Gadaa ceremony" />
           </div>
         </div>
+      </section>
 
-        {/* SECTION 5: CULTURE & LANDMARKS (Magazine Style Layout) */}
-        <div className="columns-1 md:columns-2 gap-8 space-y-8">
-          <div className="break-inside-avoid bg-stone-100 p-8">
-            <h3 className="text-2xl font-bold mb-4">The Irreecha Festival</h3>
-            <p>Millions gather at Lake Hora to celebrate thanksgiving, a vibrant display of Oromo unity.</p>
-          </div>
-          {/* [INSERT PHOTO_4: Irreecha Festival] */}
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZM4x0VC8TtzKG4Zti471UkjAXoYhW03G0A&s" className="w-full rounded-sm" alt="Irreecha" />
-          
-          <div className="break-inside-avoid bg-stone-100 p-8">
-            <h3 className="text-2xl font-bold mb-4">Natural Wonders</h3>
-            <p>Explore the Sof Omar Caves—one of the world's most spectacular underground systems.</p>
-          </div>
-          {/* [INSERT PHOTO_5: Sof Omar Caves] */}
-          <img src="INSERT_PHOTO_5_URL" className="w-full rounded-sm" alt="Sof Omar" />
+      {/* Timeline Cards */}
+      <section className="h-screen bg-emerald-50/50 py-20 px-8 flex items-center">
+        <div className="w-full max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            { year: '16th C', title: 'Great Expansion', desc: 'Oromo migrate across Ethiopia', color: 'bg-orange-500' },
+            { year: '18th C', title: 'Kingdoms Rise', desc: 'Jimma, Limmu-Ennarea powerhouses', color: 'bg-emerald-500' },
+            { year: '1889', title: 'Menelik Era', desc: 'Oromia joins Ethiopian Empire', color: 'bg-blue-500' },
+            { year: '1936', title: 'Abebe Bikila', desc: 'First barefoot Olympic marathon gold', color: 'bg-amber-500' },
+            { year: '2016', title: 'UNESCO Honor', desc: 'Gadaa system World Heritage', color: 'bg-purple-500' },
+            { year: '2024', title: '40M+ Strong', desc: 'Largest Ethiopian ethnic group', color: 'bg-rose-500' }
+          ].map((item, i) => (
+            <div key={i} className={`group p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-4 transition-all bg-white/70 backdrop-blur-xl border border-white/50 ${item.color} shadow-lg hover:shadow-${item.color.slice(4)}/25`}>
+              <div className="text-3xl md:text-4xl font-black text-white mb-4">{item.year}</div>
+              <h4 className="text-2xl font-bold text-white mb-3 group-hover:translate-x-2 transition-transform">{item.title}</h4>
+              <p className="text-lg text-slate-100 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
         </div>
+      </section>
 
-        {/* SECTION 6: THE PEOPLE & ATHLETES */}
-        <section className="mt-24 text-center border-t-2 border-stone-200 pt-16">
-          <h2 className="text-5xl font-black italic mb-6">"Home of Champions"</h2>
-          <p className="text-xl max-w-3xl mx-auto mb-10">
-            From the legendary Abebe Bikila to the Dibaba sisters, Oromia’s high-altitude 
-            highlands have raised the world's greatest long-distance runners.
+      {/* Culture Showcase */}
+      <section className="h-screen relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-900/30 to-emerald-900/30" />
+        <div className="relative z-10 h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8 py-20 items-center">
+          {[
+            { title: 'Irreecha', desc: 'Massive thanksgiving festival', img: 'https://images.unsplash.com/photo-1578632354576-5d5fbea98581?w=400' },
+            { title: 'Afaan Oromoo', desc: 'Cushitic language of millions', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400' },
+            { title: 'Gadaa Democracy', desc: 'Ancient political genius', img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400' },
+            { title: 'Clan Heritage', desc: 'Complex social organization', img: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400' },
+            { title: 'Geerarsa', desc: 'Epic oral literature', img: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400' },
+            { title: 'Siqqee', desc: 'Women\'s rights institution', img: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400' }
+          ].map((item, i) => (
+            <div key={i} className="group relative h-80 rounded-3xl overflow-hidden shadow-2xl cursor-pointer hover:scale-105 transition-all">
+              <img src={item.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt={item.title} />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end">
+                <h4 className="text-2xl font-bold text-white mb-2">{item.title}</h4>
+                <p className="text-lg text-slate-200">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Final Call */}
+      <footer className="h-screen bg-gradient-to-br from-stone-900 via-slate-900 to-black flex items-center justify-center px-8 py-20">
+        <div className="text-center max-w-4xl mx-auto">
+          <h2 className="text-6xl md:text-7xl lg:text-8xl font-serif italic mb-12 bg-gradient-to-r from-amber-400 via-orange-400 to-red-500 bg-clip-text text-transparent animate-pulse">
+            Nagaa dhaaraa Oromiyaa
+          </h2>
+          <p className="text-2xl md:text-3xl text-slate-300 mb-8 leading-loose max-w-3xl mx-auto">
+            Peace endures Oromia – from ancient Gadaa to modern Ethiopia, the Oromo spirit defines a nation.
           </p>
-          {/* [INSERT PHOTO_6: Athletes or Running Track] */}
-          <img 
-            src="INSERT_PHOTO_6_URL" 
-            className="w-full h-80 object-cover rounded-sm grayscale" 
-            alt="Champions" 
-          />
-        </section>
-      </div>
-
-      {/* FOOTER */}
-      <footer className="bg-stone-900 text-stone-500 py-12 text-center text-sm uppercase tracking-widest">
-        Oromia Cultural Portfolio &copy; 2026
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-12 py-6 bg-gradient-to-r from-emerald-600 to-green-600 text-white text-xl font-bold rounded-full hover:shadow-emerald-500/50 shadow-2xl hover:scale-105 transition-all hover:from-emerald-500">
+              Explore More Nations
+            </button>
+            <button className="px-12 py-6 border-4 border-white/50 text-white text-xl font-bold rounded-full hover:bg-white/20 backdrop-blur-xl transition-all hover:shadow-white/25 hover:scale-105">
+              Learn Gadaa Deeply
+            </button>
+          </div>
+        </div>
       </footer>
     </div>
   );
 };
 
 export default Oromo;
+

@@ -11,11 +11,11 @@ const galleryItems = [
 
 function CultureGallery() {
   return (
-    <div className="culture-gallery grid grid-cols-2 md:grid-cols-3 gap-6">
+    <div className="culture-gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
       {galleryItems.map((item, index) => (
         <div key={index} className="overflow-hidden rounded-xl shadow-lg group">
           <img 
-            className="h-auto w-full object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out" 
+            className="h-48 sm:h-56 md:h-64 lg:h-72 w-full object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out" 
             src={item.src} 
             alt={item.alt} />
         </div>
@@ -25,3 +25,4 @@ function CultureGallery() {
 }
 
 export default CultureGallery;
+
