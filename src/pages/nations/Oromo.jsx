@@ -1,116 +1,97 @@
 import React from 'react';
+import oromoimage from '../../assets/oro.png'; 
+import cultureimage from '../../assets/irrecha.png'; 
+
 
 const Oromo = () => {
+  const oromoData = {
+    name: 'Oromo',
+    culture: 'Land of Gadaa Democracy - Heartbeat of Ethiopia',
+    origin: `The Oromo people are the largest ethnic group in Ethiopia (40+ million), originating from the Bale Mountains in the 16th century. Through the Great Oromo Migration, they expanded across southern, central, western, and eastern Ethiopia, establishing powerful kingdoms like Jimma Abba Jifar and Leqa Naqamte.`,
+    gadaa: `Gadaa is the most sophisticated indigenous democratic system in the world (UNESCO Heritage). Age-grade leadership rotates every 8 years peacefully through community consensus. No kings - power through elected Abba Gadaa (president) and council.`,
+    cultureDetail: `Rich Afaan Oromoo language (Cushitic). Oromo culture is anchored by the Gadaa system, an ancient indigenous democratic governance structure that orchestrates social, political, and economic life through eight-year leadership cycles and promotes the philosophy of Nagaa Oromoo (communal peace). This social fabric is strengthened by deep-seated institutions like the Odaa (sycamore tree), which serves as a sacred space for judicial and legislative assemblies, and the Siqqee, a women-led institution that safeguards gender rights and mediates conflict. The heritage is further expressed through diverse culinary traditions, such as Buna Qala (coffee beans sautéed in butter) and Anchoote (a nutritious root crop), alongside a rich oral tradition where history and laws are preserved through Argaa Dhageettii. Together with the vibrant Irreecha festival and the rhythmic sounds of the kebero drum, these elements form a resilient identity centered on harmony, justice, and a profound connection to the land..`,
+    activists: `The Oromo people have a long history of heroes who fought bravely for their land, rights, and freedom. Leaders like General Waqo Gutu resisted colonial oppression, while Mamo Meqdasi was among the first to represent Oromo voices in parliament. Many others, including local fighters, community leaders, and activists, gave their lives defending their people and culture. In recent times, Hachalu Hundessa became a symbol of Oromo struggle, using his music and voice to inspire millions and standing for justice until his tragic death.`,
+    olympic: `Legendary runners: Abebe Bikila (barefoot 1960 Rome gold, 1964 Tokyo), Miruts Yifter ("Baby Face" 1980 double gold), Derartu Tulu (first African woman 10k gold 1992). From Oromia highlands.`,
+    famous: `Famous Oromo: Haile Gebreselassie (4x Olympic gold), Tilahun Gessese (legendary singer), Mohammed Hussein (poet), Queen of Sheba legends connect to Daamuu clans.`,
+    bilile: `Bilile was a brave Oromo freedom fighter who fought against oppression. Born in the early 20th century, she became legendary for her courage, leading resistance against colonial forces. Her story inspires Oromo women warriors, symbolizing unbreakable spirit and leadership in struggle for justice.`
+  };
+
+  const sections = [
+    // Updated line below:
+    { title: '1. Origin', content: oromoData.origin, color: 'emerald', imgSrc: oromoimage },
+    { title: '2. Gadaa System', content: oromoData.gadaa, color: 'emerald', imgSrc: 'GADAA_IMAGE_URL' },
+    { title: '3. Culture', content: oromoData.cultureDetail, color: 'amber', imgSrc: cultureimage },
+    { title: '4. Activists & Politicians', content: oromoData.activists, color: 'blue', imgSrc: 'ACTIVISTS_IMAGE_URL' },
+    { title: '5. Olympic Glory', content: oromoData.olympic, color: 'orange', imgSrc: 'OLYMPIC_IMAGE_URL' },
+    { title: '6. Famous Oromo Legends', content: oromoData.famous, color: 'rose', imgSrc: 'LEGENDS_IMAGE_URL' }
+  ];
+
   return (
-    <div className="h-screen w-screen fixed inset-0 bg-gradient-to-br from-amber-50 via-stone-50 to-emerald-50 text-slate-900 font-serif antialiased overflow-hidden">
-      {/* Parallax Hero */}
-      <section className="h-screen relative flex items-center justify-center text-center px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/60 to-amber-900/40" />
-        <div className="relative z-20 w-full max-w-6xl mx-auto p-8">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-wider mb-4 bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent drop-shadow-2xl animate-fade-in">
-            Oromia
-          </h1>
-          <p className="text-2xl md:text-3xl lg:text-4xl font-light leading-loose max-w-4xl mx-auto bg-white/80 backdrop-blur-sm p-6 rounded-3xl shadow-2xl">
-            The heartbeat of Ethiopia – largest ethnic group with ancient Gadaa democracy, legendary warriors, Olympic champions, and unbreakable spirit.
-          </p>
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-serif bg-gradient-to-br from-amber-50 to-emerald-50">
+      {/* Full-width Hero */}
+      <div className="mb-12">
+        <div className="w-full h-64 md:h-96 lg:h-[500px] bg-gradient-to-br from-emerald-400 to-amber-500 rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-widest drop-shadow-2xl z-10">OROMO</h1>
         </div>
-      </section>
+        <div className="text-center mt-8 max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-stone-800 uppercase tracking-widest bg-gradient-to-r from-emerald-600 to-amber-600 bg-clip-text text-transparent drop-shadow-2xl">{oromoData.name}</h1>
+          <p className="text-xl md:text-2xl text-stone-600 italic mt-4">"{oromoData.culture}"</p>
+        </div>
+      </div>
 
-      {/* Gadaa Democracy - Full Width */}
-      <section className="h-screen flex items-center justify-between px-8 py-20 bg-gradient-to-r from-slate-900/90 to-stone-900/90 text-white">
-        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <h2 className="text-5xl md:text-6xl font-black uppercase tracking-widest bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent">
-              Gadaa System
-            </h2>
-            <p className="text-xl md:text-2xl leading-loose mb-12 max-w-lg opacity-95">
-              World's most sophisticated indigenous democracy. 500+ years of peaceful power rotation through age-sets. UNESCO World Heritage.
-            </p>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="p-8 bg-white/10 rounded-3xl backdrop-blur-xl border border-white/20 hover:bg-white/20 transition-all">
-                <div className="text-5xl mb-4">⚖️</div>
-                <h4 className="text-2xl font-bold uppercase mb-2">8-Year Cycles</h4>
-                <p>Leadership rotates every 8 years</p>
-              </div>
-              <div className="p-8 bg-white/10 rounded-3xl backdrop-blur-xl border border-white/20 hover:bg-white/20 transition-all">
-                <div className="text-5xl mb-4">⭕</div>
-                <h4 className="text-2xl font-bold uppercase mb-2">Peaceful Transfer</h4>
-                <p>No violence - community consensus</p>
+      <div className="w-full grid gap-12">
+        {sections.map((section, i) => (
+          <section key={i} className="grid md:grid-cols-2 gap-8 items-center">
+            <div className={`p-8 rounded-3xl shadow-2xl min-h-[300px] flex items-center border 
+              ${section.color === 'emerald' ? 'bg-gradient-to-br from-emerald-500/10 to-emerald-600/10 border-emerald-200' : 
+                section.color === 'amber' ? 'bg-gradient-to-br from-amber-500/10 to-amber-600/10 border-amber-200' : 
+                section.color === 'blue' ? 'bg-gradient-to-br from-blue-500/10 to-blue-600/10 border-blue-200' : 
+                section.color === 'orange' ? 'bg-gradient-to-br from-orange-500/10 to-orange-600/10 border-orange-200' : 
+                'bg-gradient-to-br from-rose-500/10 to-rose-600/10 border-rose-200'}`}>
+
+              <div>
+                <h2 className="text-3xl md:text-4xl font-black uppercase tracking-widest mb-6 bg-gradient-to-r from-gray-800 to-stone-700 bg-clip-text drop-shadow-lg">{section.title}</h2>
+                <p className="text-lg md:text-xl leading-relaxed text-stone-800">{section.content}</p>
               </div>
             </div>
-          </div>
-          <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl lg:rotate-3 hover:rotate-0 transition-all">
-            <img src="https://images.unsplash.com/photo-1621346655624-12d42f47a6fb?w=800" className="w-full h-full object-cover" alt="Gadaa ceremony" />
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline Cards */}
-      <section className="h-screen bg-emerald-50/50 py-20 px-8 flex items-center">
-        <div className="w-full max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { year: '16th C', title: 'Great Expansion', desc: 'Oromo migrate across Ethiopia', color: 'bg-orange-500' },
-            { year: '18th C', title: 'Kingdoms Rise', desc: 'Jimma, Limmu-Ennarea powerhouses', color: 'bg-emerald-500' },
-            { year: '1889', title: 'Menelik Era', desc: 'Oromia joins Ethiopian Empire', color: 'bg-blue-500' },
-            { year: '1936', title: 'Abebe Bikila', desc: 'First barefoot Olympic marathon gold', color: 'bg-amber-500' },
-            { year: '2016', title: 'UNESCO Honor', desc: 'Gadaa system World Heritage', color: 'bg-purple-500' },
-            { year: '2024', title: '40M+ Strong', desc: 'Largest Ethiopian ethnic group', color: 'bg-rose-500' }
-          ].map((item, i) => (
-            <div key={i} className={`group p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-4 transition-all bg-white/70 backdrop-blur-xl border border-white/50 ${item.color} shadow-lg hover:shadow-${item.color.slice(4)}/25`}>
-              <div className="text-3xl md:text-4xl font-black text-white mb-4">{item.year}</div>
-              <h4 className="text-2xl font-bold text-white mb-3 group-hover:translate-x-2 transition-transform">{item.title}</h4>
-              <p className="text-lg text-slate-100 leading-relaxed">{item.desc}</p>
+            <div className="h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl bg-white flex items-center justify-center">
+              <img 
+                src={section.imgSrc} 
+                alt={section.title} 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Image+Coming+Soon'; }}
+              />
             </div>
-          ))}
-        </div>
-      </section>
+          </section>
+        ))}
 
-      {/* Culture Showcase */}
-      <section className="h-screen relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900/30 to-emerald-900/30" />
-        <div className="relative z-10 h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8 py-20 items-center">
-          {[
-            { title: 'Irreecha', desc: 'Massive thanksgiving festival', img: 'https://images.unsplash.com/photo-1578632354576-5d5fbea98581?w=400' },
-            { title: 'Afaan Oromoo', desc: 'Cushitic language of millions', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400' },
-            { title: 'Gadaa Democracy', desc: 'Ancient political genius', img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400' },
-            { title: 'Clan Heritage', desc: 'Complex social organization', img: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400' },
-            { title: 'Geerarsa', desc: 'Epic oral literature', img: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400' },
-            { title: 'Siqqee', desc: 'Women\'s rights institution', img: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400' }
-          ].map((item, i) => (
-            <div key={i} className="group relative h-80 rounded-3xl overflow-hidden shadow-2xl cursor-pointer hover:scale-105 transition-all">
-              <img src={item.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt={item.title} />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end">
-                <h4 className="text-2xl font-bold text-white mb-2">{item.title}</h4>
-                <p className="text-lg text-slate-200">{item.desc}</p>
-              </div>
+        {/* 7. Bilile Story */}
+        <section className="grid md:grid-cols-2 gap-8 items-center bg-gradient-to-br from-violet-500/10 to-purple-600/10 border border-violet-200 p-8 rounded-3xl shadow-2xl">
+          <div className="min-h-[300px] flex items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-black uppercase tracking-widest mb-6 bg-gradient-to-r from-violet-800 to-purple-900 bg-clip-text drop-shadow-lg">7. Bilile - Freedom Fighter</h2>
+              <p className="text-lg md:text-xl leading-relaxed text-stone-800">{oromoData.bilile}</p>
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Final Call */}
-      <footer className="h-screen bg-gradient-to-br from-stone-900 via-slate-900 to-black flex items-center justify-center px-8 py-20">
-        <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-6xl md:text-7xl lg:text-8xl font-serif italic mb-12 bg-gradient-to-r from-amber-400 via-orange-400 to-red-500 bg-clip-text text-transparent animate-pulse">
-            Nagaa dhaaraa Oromiyaa
-          </h2>
-          <p className="text-2xl md:text-3xl text-slate-300 mb-8 leading-loose max-w-3xl mx-auto">
-            Peace endures Oromia – from ancient Gadaa to modern Ethiopia, the Oromo spirit defines a nation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-12 py-6 bg-gradient-to-r from-emerald-600 to-green-600 text-white text-xl font-bold rounded-full hover:shadow-emerald-500/50 shadow-2xl hover:scale-105 transition-all hover:from-emerald-500">
-              Explore More Nations
-            </button>
-            <button className="px-12 py-6 border-4 border-white/50 text-white text-xl font-bold rounded-full hover:bg-white/20 backdrop-blur-xl transition-all hover:shadow-white/25 hover:scale-105">
-              Learn Gadaa Deeply
-            </button>
           </div>
+          <div className="h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl bg-white flex items-center justify-center">
+            <img 
+              src="BILILE_IMAGE_URL" 
+              alt="Bilile Oromo Freedom Fighter" 
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Bilile+Portrait'; }}
+            />
+          </div>
+        </section>
+
+        {/* CTA */}
+        <div className="text-center mt-20">
+          <a href="/ethnic-groups" className="inline-block px-12 py-6 bg-gradient-to-r from-emerald-600 to-green-600 text-white text-xl font-bold rounded-3xl hover:shadow-emerald-500/50 shadow-2xl hover:scale-105 transition-all duration-300">
+            ← Explore Other Nations
+          </a>
         </div>
-      </footer>
+      </div>
     </div>
-  );
+  ); 
 };
 
 export default Oromo;
-
