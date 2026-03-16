@@ -15,7 +15,7 @@ const ethnicGroups = [
 
 const EthnicGroups = () => {
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-800 py-8 sm:py-12 lg:py-16">
+     <div className="min-h-screen bg-stone-50 text-stone-800 py-8 sm:py-12 lg:py-16">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
