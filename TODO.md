@@ -8,7 +8,7 @@
 [x] 5. Create missing nation pages ✓
 [x] 6. Update Home.jsx ✓
 [x] 7. Navbar flag spacing/height improved ✓
-[ ] 8. Delete unused pages
+[ ] 8. Delete unused pages 
 
 
 
