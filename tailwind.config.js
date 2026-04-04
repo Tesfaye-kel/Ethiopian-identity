@@ -6,7 +6,7 @@ export default {
   ],
 <<<<<<< HEAD
    theme: {
-    extend: {},
+     extend: {},
 =======
   theme: {
     extend: {
