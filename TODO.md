@@ -1,24 +1,36 @@
-# Task: Flag-only Navbar + All Nations on Home Page
+# Nation Standardization Task
+## Status: ✅ COMPLETE
 
-## Steps:
-[x] 1. Read NationTemplate.jsx content ✓
-[x] 2. Rewrite Navbar.jsx to flags-only + Contact ✓
-[x] 3. Update Header.jsx (remove flags) ✓
-[x] 4. Update App.jsx ✓
-[x] 5. Create missing nation pages ✓
-[x] 6. Update Home.jsx ✓
-[x] 7. Navbar flag spacing/height improved ✓
-[ ] 8. Delete unused pages
+## Breakdown:
+### 1. Setup (Current)
+- [x] Create TODO.md
+- [ ] Verify `npm run dev`
 
+### 2. Upgrade Existing Basic Pages (7 total)
+- [✅] Afar.jsx (basic → advanced)
+- [✅] Tigrayan.jsx
+- [✅] Somali.jsx
+- [ ] Nnp.jsx (SNNPR)
+- [ ] Gambela.jsx
+- [ ] Gumuz.jsx
+- [ ] Ethiopia.jsx (polish if needed)
 
+### 3. Add New Major Nations (5 total)
+- [ ] Sidama.jsx
+- [ ] Wolayta.jsx
+- [ ] Gurage.jsx
+- [ ] Hadiya.jsx
+- [ ] Agaw.jsx
 
+### 4. Update Routing & Nav
+- [ ] App.jsx (add routes)
+- [ ] Navbar.jsx / Home.jsx / EthnicGroups.jsx (links)
 
+### 5. Final
+- [ ] Test all pages
+- [ ] Add missing assets
+- [ ] attempt_completion
 
-[ ] 3. Update Header.jsx (remove flags)
-[ ] 4. Update App.jsx (routes cleanup + add missing nations)
-[ ] 5. Create missing nation pages (Afar, Nnp, Gab, Gumuz)
-[ ] 6. Update Home.jsx (nations grid + merge EthnicGroups/History/Culture content)
-[ ] 7. Delete unused pages (EthnicGroups, History, Culture)
-[ ] 8. Test: npm run dev, check desktop/mobile navbar, home nations grid, all links
-[ ] 9. attempt_completion
+**Next:** Upgrade Afar.jsx first (uses local affar.png asset, simple upgrade path).
 
+Updated: [Current step]
