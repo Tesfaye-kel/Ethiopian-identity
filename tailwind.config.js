@@ -12,7 +12,7 @@ export default {
     extend: {
       height: {
         'dvh': '100dvh',
-        'svh': '100svh',
+         'svh': '100svh',
         'lvh': '100lvh',
       },
       width: {
