@@ -6,131 +6,133 @@ import ethioImage from '../../assets/ethio.png';
 const Amhara = () => {
   const amharaData = {
     name: 'Amhara',
+    shortDesc: 'The spiritual and imperial heart of Ethiopia, home to the ancient Ge\'ez script, rock-hewn marvels, and the legendary Solomonic dynasty.',
     culture: 'Guardians of the Highlands - Cradle of Ethiopian Civilization',
   };
 
   const sections = [
     {
-      title: '1. Ancient Origins',
-      content: `Semitic peoples from northern highlands with roots tracing to the Kingdom of Aksum (1st-10th century AD). 
-      Descendants of the Christian Solomonic Dynasty claiming lineage from King Solomon and Queen of Sheba. 
-      Ge'ez script birthplace.`,
+      title: 'Ancient Origins',
+      content: "Semitic peoples from northern highlands with roots tracing to the Kingdom of Aksum. As descendants of the Solomonic Dynasty, the Amhara have preserved the Ge'ez script and ancient Christian traditions for over a millennium.",
       imgSrc: amharaImage,
       color: 'amber'
     },
     {
-      title: '2. Amharic Language',
-      content: `Amharic - Ethiopia's federal working language spoken by 30+ million. World's 2nd most spoken Semitic language after Arabic. 
-      Rich Ge'ez literature tradition (religious texts, poetry, chronicles). Fidels (syllabary) from 9th century.`,
+      title: 'Amharic Language',
+      content: "Amharic is the federal working language of Ethiopia and the world's second most spoken Semitic language. Its unique 'Fidel' syllabary and rich poetic tradition, known as 'Wax and Gold', define the nation's intellectual soul.",
       imgSrc: cultureImage,
       color: 'stone'
     },
     {
-      title: '3. Highland Culture',
-      content: `Famous for Shemma (handwoven white cotton garments). Fuga blacksmith/jewelry craftsmen caste. 
-      Traditional music with masenqo 1-string fiddle, krar lyre, washint flute. Azmari minstrels preserve oral history through poetry/song. 
-      Teff injera + kitfo cuisine.`,
-      imgSrc: cultureImage,
-      color: 'gray'
-    },
-    {
-      title: '4. Imperial Glory',
-      content: `Birthplace of Emperors: Tewodros II (modernizer, defeated British at Magdala), Yohannes IV (Dervish fighter), 
-      Menelik II (Adwa 1896 victory creating modern Ethiopia). Gondar "Ethiopian Camelot" 17-19th century imperial capital.`,
+      title: 'Imperial Glory',
+      content: "From the castles of Gondar to the modernizing vision of Emperor Tewodros II and the victory of Menelik II at Adwa, the Amhara region has been the seat of power that shaped modern Ethiopia's independence.",
       imgSrc: ethioImage,
       color: 'rose'
     },
     {
-      title: '5. Sacred Festivals',
-      content: `Timkat (Epiphany) - dramatic replicas of Ark of Covenant paraded through streets with priestly blessings. 
-      Meskel (Finding True Cross) massive bonfires. Genna Christmas hockey on horseback. Fasts 180+ days/year (vegan cuisine perfected).`,
+      title: 'Sacred Festivals',
+      content: "The highlands come alive during Timkat (Epiphany) and Meskel. These UNESCO-recognized celebrations involve vibrant processions, ancient chants, and the parading of the Tabot, reflecting a deep, unbroken faith.",
       imgSrc: cultureImage,
       color: 'emerald'
     },
     {
-      title: '6. Legendary Figures',
-      content: `Athletes: Kebede Tessema (football "father"), Hirut Dikebo, marathon greats from high-altitude training. 
-      Scholars: Taddese Beyene linguist. Musicians: Tilahun Gessesse (Golden Voice). Empress Zewditu (1st female ruler).`,
-      imgSrc: amharaImage,
-      color: 'blue'
-    },
-    {
-      title: '7. UNESCO Highlands',
-      content: `Lalibela 11 rock-hewn churches ("New Jerusalem"). Simien Mountains National Park (gelada baboons, ibex). 
-      Lake Tana monasteries (Beta Maryam). Gondar castle complex. Blue Nile Falls (Tis Issat). Gojjam tej honey wine.`,
+      title: 'UNESCO Highlands',
+      content: "Home to Lalibela's eleven rock-hewn churches, the Simien Mountains' dramatic peaks, and the island monasteries of Lake Tana. These sites represent the pinnacle of African architectural and natural heritage.",
       imgSrc: ethioImage,
       color: 'violet'
     }
   ];
 
-  const getBgClass = (color) => {
-    const bgClasses = {
-      amber: 'bg-gradient-to-br from-amber-500/10 to-amber-600/10 border-amber-200',
-      stone: 'bg-gradient-to-br from-stone-400/10 to-stone-500/10 border-stone-200',
-      gray: 'bg-gradient-to-br from-gray-400/10 to-gray-500/10 border-gray-200',
-      rose: 'bg-gradient-to-br from-rose-500/10 to-rose-600/10 border-rose-200',
-      emerald: 'bg-gradient-to-br from-emerald-500/10 to-emerald-600/10 border-emerald-200',
-      blue: 'bg-gradient-to-br from-blue-500/10 to-blue-600/10 border-blue-200',
-      violet: 'bg-gradient-to-br from-violet-500/10 to-purple-600/10 border-violet-200'
+  const getColorTheme = (color) => {
+    const themes = {
+      amber: 'bg-[#453227] text-amber-50', // Deep Earthy Brown
+      stone: 'bg-stone-900 text-stone-50',
+      rose: 'bg-[#541e1e] text-rose-50', // Deep Maroon
+      emerald: 'bg-[#1a2e1a] text-emerald-50', // Deep Forest
+      violet: 'bg-[#2e1a3d] text-violet-50', // Deep Plum
     };
-    return bgClasses[color] || bgClasses.amber;
-  };
-
-  const getTextClass = (color) => {
-    const textClasses = {
-      amber: 'bg-gradient-to-r from-amber-800 to-amber-900 bg-clip-text text-transparent border-amber-400',
-      stone: 'bg-gradient-to-r from-stone-700 to-stone-800 bg-clip-text text-transparent border-stone-400',
-      gray: 'bg-gradient-to-r from-gray-700 to-gray-800 bg-clip-text text-transparent border-gray-400',
-      rose: 'bg-gradient-to-r from-rose-800 to-rose-900 bg-clip-text text-transparent border-rose-400',
-      emerald: 'bg-gradient-to-r from-emerald-800 to-emerald-900 bg-clip-text text-transparent border-emerald-400',
-      blue: 'bg-gradient-to-r from-blue-800 to-blue-900 bg-clip-text text-transparent border-blue-400',
-      violet: 'bg-gradient-to-r from-violet-800 to-purple-900 bg-clip-text text-transparent border-violet-400'
-    };
-    return textClasses[color] || textClasses.amber;
+    return themes[color] || themes.stone;
   };
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-serif bg-gradient-to-br from-amber-50 to-stone-100">
-      {/* Hero */}
-      <div className="mb-12">
-        <div className="w-full h-64 md:h-96 lg:h-[500px] bg-gradient-to-br from-amber-400 via-stone-500 to-amber-600 rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden relative">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-widest drop-shadow-2xl z-10">AMHARA</h1>
+    <div className="min-h-screen bg-white selection:bg-amber-200">
+      
+      {/* 1. CINEMATIC HERO SECTION */}
+      <section className="relative h-screen w-full overflow-hidden group">
+        <img 
+          src={amharaImage} 
+          alt="Amhara Highlands" 
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+        />
+        {/* Dark Overlay with Hover Reveal */}
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-500 flex flex-col items-center justify-center text-center px-6">
+          <span className="text-white/70 tracking-[0.5em] uppercase text-sm mb-4 block animate-pulse font-serif">
+            The Imperial Heart
+          </span>
+          <h1 className="text-7xl md:text-[10rem] font-bold text-white tracking-tighter transition-all duration-700 group-hover:tracking-normal font-serif">
+            {amharaData.name}
+          </h1>
+          
+          {/* Hover Reveal Description */}
+          <p className="max-w-2xl text-xl md:text-2xl text-white/0 group-hover:text-white/90 transition-all duration-700 transform translate-y-10 group-hover:translate-y-0 italic font-light mt-4 font-serif">
+            {amharaData.shortDesc}
+          </p>
+          
+          <div className="absolute bottom-10 animate-bounce text-white/40">
+            <span className="text-xs tracking-[0.3em] uppercase">Explore the Highlands</span>
+          </div>
         </div>
-        <div className="text-center mt-8 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-stone-800 uppercase tracking-widest bg-gradient-to-r from-amber-600 to-stone-600 bg-clip-text text-transparent drop-shadow-2xl">{amharaData.name}</h1>
-          <p className="text-xl md:text-2xl text-stone-600 italic mt-4 font-serif">"{amharaData.culture}"</p>
-        </div>
-      </div>
+      </section>
 
-      <div className="w-full max-w-7xl mx-auto">
+      {/* 2. FULL WIDTH ALTERNATING SECTIONS */}
+      <div className="w-full">
         {sections.map((section, i) => (
-          <section key={i} className="grid md:grid-cols-2 gap-8 items-center mb-[-3.5rem] md:mb-[-4.5rem] relative">
-            <div className={`p-8 md:p-12 rounded-3xl shadow-2xl min-h-[300px] flex items-center border-4 ${getBgClass(section.color)}`}>
-              <div>
-                <h2 className={`text-3xl md:text-4xl font-black uppercase tracking-widest mb-6 pb-2 border-b-2 ${getTextClass(section.color)}`}>{section.title}</h2>
-                <p className="text-lg md:text-xl leading-relaxed text-stone-800 line-clamp-6">{section.content}</p>
+          <div 
+            key={i} 
+            className={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} min-h-[600px] w-full`}
+          >
+            {/* Text Panel */}
+            <div className={`w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center ${getColorTheme(section.color)}`}>
+              <div className="max-w-md mx-auto">
+                <span className="text-xs font-bold tracking-[0.4em] uppercase opacity-60 mb-2 block font-sans">Chapter 0{i + 1}</span>
+                <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 leading-tight">{section.title}</h2>
+                <div className="h-1 w-16 bg-amber-500 mb-8"></div>
+                <p className="text-lg md:text-xl leading-relaxed font-serif font-light opacity-90 first-letter:text-5xl first-letter:font-bold first-letter:mr-2">
+                  {section.content}
+                </p>
               </div>
             </div>
-            <div className="h-[300px] md:h-[400px] lg:h-[450px] rounded-3xl overflow-hidden shadow-2xl relative -mr-12 md:-mr-16 lg:-mr-20 z-10 border-4 border-white">
+
+            {/* Image Panel */}
+            <div className="w-full md:w-1/2 h-[450px] md:h-auto relative overflow-hidden group">
               <img 
                 src={section.imgSrc} 
                 alt={section.title} 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 hover:rotate-1"
-                onError={(e) => { 
-                  e.target.src = `https://via.placeholder.com/700x450?text=${section.title.replace(/[^\w]/g, '')}`; 
-                }}
+                className="absolute inset-0 w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                onError={(e) => { e.target.src = `https://via.placeholder.com/1000x1000?text=${section.title}`; }}
               />
+              {/* Subtle Film Grain/Overlay */}
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
             </div>
-          </section>
+          </div>
         ))}
       </div>
 
-      {/* CTA */}
-      <div className="text-center mt-20">
-        <a href="/" className="inline-block px-12 py-6 bg-gradient-to-r from-amber-600 to-stone-600 text-white text-xl font-bold rounded-3xl hover:shadow-amber-500/50 shadow-2xl hover:scale-105 transition-all duration-300">
-          ← Back to Home
-        </a>
-      </div>
+      {/* 3. FOOTER / QUOTE */}
+      <footer className="py-24 bg-[#fcfaf7] text-center px-6 border-t border-stone-200">
+        <div className="max-w-3xl mx-auto">
+          <div className="h-px w-24 bg-amber-600 mx-auto mb-10" />
+          <p className="text-stone-800 font-serif italic text-2xl md:text-3xl leading-relaxed mb-12">
+            "{amharaData.culture}"
+          </p>
+          <a 
+            href="/" 
+            className="inline-block px-12 py-4 border-2 border-stone-900 text-stone-900 text-xs font-bold uppercase tracking-[0.3em] hover:bg-stone-900 hover:text-white transition-all duration-300"
+          >
+            ← Back to Home
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };

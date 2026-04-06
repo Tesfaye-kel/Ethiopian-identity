@@ -1,129 +1,144 @@
 import React from 'react';
-import somaliImage from '../../assets/som.png';
+import somaliImage from '../../assets/som.png'; 
 import cultureImage from '../../assets/cultu.png';
-import hararImage from '../../assets/som.png'; // Harar walled city
-import camelImage from '../../assets/som.png'; // Camels
 
 const Somali = () => {
   const somaliData = {
     name: 'Somali',
+    shortDesc: 'The noble nomads of the Horn, masters of oral poetry and keepers of the ancient Xeer code, defined by their deep bond with the desert and the camel.',
     culture: 'Poets of the Ogaden - Camel Lords of the Horn',
   };
 
   const sections = [
     {
-      title: '1. Cushitic Clans',
-      content: `Cushitic pastoralists dominant in Ethiopia\\'s Somali Region (Ogaden). Darod, Issa, Gadabuursi major clans. Xeer traditional legal code governs disputes, marriage, blood feuds. Strong genealogical memory (20+ generations).`,
+      title: 'Cushitic Clans',
+      content: "Pastoralists of the Somali Region (Ogaden) governed by the Xeer—a traditional legal code. With a genealogical memory stretching back 20 generations, the clan structure provides a resilient social fabric built on honor and shared history.",
       imgSrc: somaliImage,
       color: 'emerald'
     },
     {
-      title: '2. Somali Poetry',
-      content: `World-famous oral poetry tradition (gabayaa). Poets (gabayaa) compose instant epics during clan meetings, weddings. Gabay (formal poetry), geeraar (praise songs), jiifto (love poems). UNESCO intangible heritage.`,
-      imgSrc: cultureImage,
+      title: 'Somali Poetry',
+      content: "Known as the 'Nation of Poets,' the Somali people hold oral poetry (Gabay) as their highest art form. Poets compose instant epics that serve as news, history, and law, preserving the soul of the nomad across centuries.",
+      imgSrc: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1200&auto=format&fit=crop', // Poetry/Literature feel
       color: 'green'
     },
     {
-      title: '3. Camel Economy',
-      content: `Master camel herders with 300+ breeds knowledge. Female camels (heer) produce 6L milk daily. Camels primary currency (bride price 20-100 camels). Veterinary knowledge rivals modern science.`,
-      imgSrc: camelImage,
+      title: 'Camel Economy',
+      content: "Master camel herders with unmatched veterinary knowledge. The camel is the primary currency and lifeblood of the desert, providing milk, transport, and a nomadic moral code centered on endurance and survival.",
+      imgSrc: 'https://images.unsplash.com/photo-1542365887-11499f13fe17?q=80&w=1200&auto=format&fit=crop', // High quality Camel image
       color: 'lime'
     },
     {
-      title: '4. Harar Connection',
-      content: `Somali traders crucial to Harar City (UNESCO walled city) 16th-19th century. Coffee trade origin (Buna Qela). Somali merchants linked Ethiopia to Arabian peninsula. Harari-Somali intermarriage.`,
-      imgSrc: hararImage,
+      title: 'Harar Connection',
+      content: "Somali traders were the bridge between the walled city of Harar and the world. Connecting the Ethiopian highlands to the Arabian Peninsula, they turned Harar into a global hub for the coffee and incense trade.",
+      imgSrc: 'https://images.unsplash.com/photo-1523805081730-614449274074?q=80&w=1200&auto=format&fit=crop', // Harar-style architecture
       color: 'teal'
     },
     {
-      title: '5. Islamic Scholarship',
-      content: `Early Islamic centers in Ogaden. Sheikh Hussein Aba Jifar shrine attracts pilgrims. Somali ulama preserve rare manuscripts. Taqwa (God-consciousness) central to nomadic moral code.`,
-      imgSrc: somaliImage,
-      color: 'slate'
-    },
-    {
-      title: '6. Traditional Dress',
-      content: `Men: ma\\'awis cotton wrap, turban. Women: guntiino wrap dress with intricate embroidery. Gold/silver jewelry (dhaanto). Henna designs, frankincense perfume. Macawis exported worldwide.`,
+      title: 'Traditional Dress',
+      content: "The vibrant Guntiino for women and the Ma'awis wrap for men signify a culture of elegance. Often scented with frankincense and adorned with intricate henna, the Somali attire is a symbol of desert prestige.",
       imgSrc: cultureImage,
       color: 'emerald'
     },
     {
-      title: '7. Dhaanto Dance',
-      content: `High-energy stick dance celebrating weddings, victories. Men compete in synchronized jumps, women clap/sing. National symbol of Somali unity across borders.`,
-      imgSrc: camelImage,
-      color: 'gray'
+      title: 'Dhaanto Dance',
+      content: "A high-energy, rhythmic dance that celebrates life, victory, and unity. Dhaanto is the heartbeat of Somali celebrations, where the rhythmic clapping and synchronized jumps bridge the gap between tradition and modern pride.",
+      imgSrc: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1200&auto=format&fit=crop', // Celebration/Dance vibe
+      color: 'slate'
     }
   ];
 
-  const getBgClass = (color) => {
-    const bgClasses = {
-      emerald: 'bg-gradient-to-br from-emerald-500/10 to-emerald-600/10 border-emerald-200',
-      green: 'bg-gradient-to-br from-green-500/10 to-green-600/10 border-green-200',
-      lime: 'bg-gradient-to-br from-lime-500/10 to-lime-600/10 border-lime-200',
-      teal: 'bg-gradient-to-br from-teal-500/10 to-teal-600/10 border-teal-200',
-      slate: 'bg-gradient-to-br from-slate-400/10 to-slate-500/10 border-slate-200',
-      gray: 'bg-gradient-to-br from-gray-400/10 to-gray-500/10 border-gray-200'
+  const getColorTheme = (color) => {
+    const themes = {
+      emerald: 'bg-[#064e3b] text-emerald-50', // Deep Forest
+      green: 'bg-[#14532d] text-green-50', // Deep Green
+      lime: 'bg-[#365314] text-lime-50', // Olive/Earthy
+      teal: 'bg-[#134e4a] text-teal-50', // Deep Teal
+      slate: 'bg-[#0f172a] text-slate-50', // Midnight
     };
-    return bgClasses[color] || bgClasses.emerald;
-  };
-
-  const getTextClass = (color) => {
-    const textClasses = {
-      emerald: 'bg-gradient-to-r from-emerald-800 to-emerald-900 bg-clip-text text-transparent border-emerald-400',
-      green: 'bg-gradient-to-r from-green-800 to-green-900 bg-clip-text text-transparent border-green-400',
-      lime: 'bg-gradient-to-r from-lime-800 to-lime-900 bg-clip-text text-transparent border-lime-400',
-      teal: 'bg-gradient-to-r from-teal-800 to-teal-900 bg-clip-text text-transparent border-teal-400',
-      slate: 'bg-gradient-to-r from-slate-700 to-slate-800 bg-clip-text text-transparent border-slate-400',
-      gray: 'bg-gradient-to-r from-gray-700 to-gray-800 bg-clip-text text-transparent border-gray-400'
-    };
-    return textClasses[color] || textClasses.emerald;
+    return themes[color] || themes.emerald;
   };
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-serif bg-gradient-to-br from-emerald-50 to-green-50">
-      {/* Hero */}
-      <div className="mb-12">
-        <div className="w-full h-64 md:h-96 lg:h-[500px] bg-gradient-to-br from-emerald-400 to-green-500 rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden relative">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-widest drop-shadow-2xl z-10">SOMALI</h1>
+    <div className="min-h-screen bg-white selection:bg-emerald-200">
+      
+      {/* 1. CINEMATIC HERO SECTION */}
+      <section className="relative h-screen w-full overflow-hidden group">
+        <img 
+          src={somaliImage} 
+          alt="Somali Landscape" 
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+        />
+        {/* Dark Overlay with Hover Reveal */}
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/70 transition-colors duration-500 flex flex-col items-center justify-center text-center px-6">
+          <span className="text-white/70 tracking-[0.5em] uppercase text-sm mb-4 block animate-pulse font-serif">
+            The Nation of Poets
+          </span>
+          <h1 className="text-7xl md:text-[10rem] font-bold text-white tracking-tighter transition-all duration-700 group-hover:tracking-normal font-serif">
+            {somaliData.name}
+          </h1>
+          
+          {/* Hover Reveal Description */}
+          <p className="max-w-2xl text-xl md:text-2xl text-white/0 group-hover:text-white/90 transition-all duration-700 transform translate-y-10 group-hover:translate-y-0 italic font-light mt-4 font-serif">
+            {somaliData.shortDesc}
+          </p>
+          
+          <div className="absolute bottom-10 animate-bounce text-white/40">
+            <span className="text-xs tracking-[0.3em] uppercase">Scroll to Explore</span>
+          </div>
         </div>
-        <div className="text-center mt-8 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-stone-800 uppercase tracking-widest bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent drop-shadow-2xl">{somaliData.name}</h1>
-          <p className="text-xl md:text-2xl text-stone-600 italic mt-4 font-serif">"{somaliData.culture}"</p>
-        </div>
-      </div>
+      </section>
 
-      <div className="w-full max-w-7xl mx-auto">
+      {/* 2. FULL WIDTH ALTERNATING SECTIONS */}
+      <div className="w-full">
         {sections.map((section, i) => (
-          <section key={i} className="grid md:grid-cols-2 gap-8 items-center mb-[-3.5rem] md:mb-[-4.5rem] relative">
-            <div className={`p-8 md:p-12 rounded-3xl shadow-2xl min-h-[300px] flex items-center border-4 ${getBgClass(section.color)}`}>
-              <div>
-                <h2 className={`text-3xl md:text-4xl font-black uppercase tracking-widest mb-6 pb-2 border-b-2 ${getTextClass(section.color)}`}>{section.title}</h2>
-                <p className="text-lg md:text-xl leading-relaxed text-stone-800 line-clamp-6">{section.content}</p>
+          <div 
+            key={i} 
+            className={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} min-h-[600px] w-full`}
+          >
+            {/* Text Panel */}
+            <div className={`w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center ${getColorTheme(section.color)}`}>
+              <div className="max-w-md mx-auto">
+                <span className="text-xs font-bold tracking-[0.4em] uppercase opacity-60 mb-2 block font-sans">Heritage 0{i + 1}</span>
+                <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 leading-tight">{section.title}</h2>
+                <div className="h-1 w-16 bg-emerald-400 mb-8"></div>
+                <p className="text-lg md:text-xl leading-relaxed font-serif font-light opacity-90 first-letter:text-5xl first-letter:font-bold first-letter:mr-2">
+                  {section.content}
+                </p>
               </div>
             </div>
-            <div className="h-[300px] md:h-[400px] lg:h-[450px] rounded-3xl overflow-hidden shadow-2xl relative -mr-12 md:-mr-16 lg:-mr-20 z-10 border-4 border-white">
+
+            {/* Image Panel */}
+            <div className="w-full md:w-1/2 h-[450px] md:h-auto relative overflow-hidden group">
               <img 
                 src={section.imgSrc} 
                 alt={section.title} 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 hover:rotate-1"
-                onError={(e) => { 
-                  e.target.src = `https://via.placeholder.com/700x450?text=${section.title.replace(/[^\\w]/g, '')}`; 
-                }}
+                className="absolute inset-0 w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                onError={(e) => { e.target.src = `https://via.placeholder.com/1000x1000?text=${section.title}`; }}
               />
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
             </div>
-          </section>
+          </div>
         ))}
       </div>
 
-      {/* CTA */}
-      <div className="text-center mt-20">
-        <a href="/" className="inline-block px-12 py-6 bg-gradient-to-r from-emerald-600 to-green-600 text-white text-xl font-bold rounded-3xl hover:shadow-emerald-500/50 shadow-2xl hover:scale-105 transition-all duration-300">
-          ← Back to Home
-        </a>
-      </div>
+      {/* 3. FOOTER / QUOTE */}
+      <footer className="py-24 bg-[#f0f9f1] text-center px-6 border-t border-emerald-100">
+        <div className="max-w-3xl mx-auto">
+          <div className="h-px w-24 bg-emerald-600 mx-auto mb-10" />
+          <p className="text-stone-800 font-serif italic text-2xl md:text-3xl leading-relaxed mb-12">
+            "{somaliData.culture}"
+          </p>
+          <a 
+            href="/" 
+            className="inline-block px-12 py-4 border-2 border-emerald-900 text-emerald-900 text-xs font-bold uppercase tracking-[0.3em] hover:bg-emerald-900 hover:text-white transition-all duration-300"
+          >
+            ← Back to Home
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };
 
 export default Somali;
-

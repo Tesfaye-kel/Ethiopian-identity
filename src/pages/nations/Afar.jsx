@@ -1,129 +1,146 @@
 import React from 'react';
-import afarImage from '../../assets/affar.png';
-import cultureImage from '../../assets/cultu.png'; // Reuse for culture
-import danakilImage from '../../assets/affar.png'; // Placeholder for Danakil
-import saltImage from '../../assets/affar.png'; // Salt caravans
+import afarHero from '../../assets/affar.png'; 
+import cultureImage from '../../assets/cultu.png';
+import scravansalt from '../../assets/saltcravan.png';
 
 const Afar = () => {
   const afarData = {
     name: 'Afar',
+    shortDesc: "Masters of the Danakil—Earth's harshest and most mesmerizing landscape—the Afar people have flourished for millennia as salt miners and nomadic warriors.",
     culture: 'Salt Miners of the Danakil - Warriors of the Harshest Earth',
   };
 
   const sections = [
     {
-      title: '1. Danakil Origins',
-      content: `Cushitic pastoralists of the Afar Triangle - one of Earth\\'s hottest, lowest points. Ancestors mined salt for 1,000+ years in Danakil Depression. Survived 49°C heat, active volcanoes, acid lakes through resilience. Traditional territory spans Ethiopia, Eritrea, Djibouti.`,
-      imgSrc: afarImage,
+      title: 'Danakil Origins',
+      content: "The Afar people inhabit the Afar Triangle, one of the hottest and lowest points on the planet. Surviving temperatures of 49°C, they have adapted to a life of resilience amidst active volcanoes and shifting tectonic plates.",
+      imgSrc: afarHero,
       color: 'orange'
     },
     {
-      title: '2. Afar Language',
-content: `Afar ("Afaraf") - Eastern Cushitic language with 2M speakers. Unique click consonants, rich oral poetry tradition. Uses Arabic script traditionally. Strong oral storytelling preserves genealogy, camel lore, salt caravan epics.`
-
-      imgSrc: cultureImage,
-      color: 'amber'
-    },
-    {
-      title: '3. Salt Caravans',
-      content: `Legendary 40km camel trains carry 30-40kg salt blocks from Dallol/Danakil mines to market. 500+ camels per caravan led by Afar scouts. Blocks hand-chiseled from 200m thick salt crust. UNESCO-recognized cultural practice sustaining economy for centuries.`,
-      imgSrc: saltImage,
+      title: 'Salt Caravans',
+      content: "For centuries, Afar men have hand-chiseled salt blocks from the 200m-thick crust of the Danakil. These blocks are transported by legendary camel trains—some 500 camels long—across the desert to highland markets.",
+      // Image of camel caravans in a desert/salt flat setting
+      imgSrc: scravansalt, 
       color: 'yellow'
     },
     {
-      title: '4. Warrior Culture',
-      content: `Fierce reputation as desert warriors. Traditional spear-throwers protecting caravan routes from bandits. Gerba (headrest pillows) double as weapons. Women warriors historically fought alongside men. Strong clan-based honor code.`,
-      imgSrc: afarImage,
-      color: 'stone'
-    },
-    {
-      title: '5. Dallol Volcanoes',
-      content: `Live beside Earth\\'s hottest continuously inhabited land. Dallol volcano (116m below sea level) produces psychedelic acid pools, salt pillars. Karum salt plain mined by hand. Afar guides lead tourists through extreme terrain yearly.`,
-      imgSrc: danakilImage,
+      title: 'Dallol & Acid Pools',
+      content: "Living beside the Dallol volcano, the Afar navigate a landscape of psychedelic yellow and green acid pools and hydrothermal vents. It is a terrain that looks more like another planet than our own.",
+      // Image of the colorful sulfur springs of Dallol
+      imgSrc: 'https://images.unsplash.com/photo-1627440445214-e578c77227d8?q=80&w=1200&auto=format&fit=crop', 
       color: 'rose'
     },
     {
-      title: '6. Afambo Festivals',
-      content: `Annual Afambo festival celebrates camel culture with races, traditional wrestling, poetry contests. Women wear intricate silver jewelry (berende). Goatskin water containers, wooden milk containers central to daily life.`,
+      title: 'Erta Ale: The Lava Lake',
+      content: "The Afar territory is home to Erta Ale, one of the world's few continuously active lava lakes. Known as the 'Gateway to Hell,' it is a sacred and powerful site within the Afar cultural geography.",
+      // Image of a glowing lava lake or volcano
+      imgSrc: 'https://images.unsplash.com/photo-1614213123891-b3337e6f8099?q=80&w=1200&auto=format&fit=crop', 
+      color: 'stone'
+    },
+    {
+      title: 'Afambo Festival',
+      content: "During the annual Afambo festival, the Afar celebrate their heritage through camel racing, traditional wrestling, and oral poetry. It is a time when intricate silver jewelry and colorful traditional dress fill the desert.",
       imgSrc: cultureImage,
       color: 'emerald'
     },
     {
-      title: '7. Legendary Resilience',
-      content: `Survival masters of hyper-arid environment (25mm annual rain). Ingenious water-finding, camel milk nutrition. Rassa National Park protects Afar biodiversity (cheetah, gazelle). Climate change threatens traditional migration routes.`,
-      imgSrc: afarImage,
+      title: 'Nomadic Resilience',
+      content: "Masters of water-finding and animal husbandry, the Afar rely on goats and camels for survival in hyper-arid conditions. Their mobility is their strength, allowing them to thrive where few others could survive.",
+      // Image of desert nomadic life/livestock
+      imgSrc: 'https://images.unsplash.com/photo-1509439581779-629cffb2f662?q=80&w=1200&auto=format&fit=crop', 
       color: 'gray'
     }
   ];
 
-  const getBgClass = (color) => {
-    const bgClasses = {
-      orange: 'bg-gradient-to-br from-orange-500/10 to-orange-600/10 border-orange-200',
-      amber: 'bg-gradient-to-br from-amber-500/10 to-amber-600/10 border-amber-200',
-      yellow: 'bg-gradient-to-br from-yellow-400/10 to-yellow-500/10 border-yellow-200',
-      stone: 'bg-gradient-to-br from-stone-400/10 to-stone-500/10 border-stone-200',
-      rose: 'bg-gradient-to-br from-rose-500/10 to-rose-600/10 border-rose-200',
-      emerald: 'bg-gradient-to-br from-emerald-500/10 to-emerald-600/10 border-emerald-200',
-      gray: 'bg-gradient-to-br from-gray-400/10 to-gray-500/10 border-gray-200'
+  const getColorTheme = (color) => {
+    const themes = {
+      orange: 'bg-[#7c2d12] text-orange-50', // Deep Burnt Orange
+      yellow: 'bg-[#713f12] text-yellow-50', // Deep Ochre
+      rose: 'bg-[#881337] text-rose-50',     // Acid Rose
+      stone: 'bg-[#1c1917] text-stone-50',   // Volcanic Black
+      emerald: 'bg-[#064e3b] text-emerald-50', // Deep Oasis Green
+      gray: 'bg-[#27272a] text-zinc-50',     // Desert Gray
     };
-    return bgClasses[color] || bgClasses.orange;
-  };
-
-  const getTextClass = (color) => {
-    const textClasses = {
-      orange: 'bg-gradient-to-r from-orange-800 to-orange-900 bg-clip-text text-transparent border-orange-400',
-      amber: 'bg-gradient-to-r from-amber-800 to-amber-900 bg-clip-text text-transparent border-amber-400',
-      yellow: 'bg-gradient-to-r from-yellow-800 to-yellow-900 bg-clip-text text-transparent border-yellow-400',
-      stone: 'bg-gradient-to-r from-stone-700 to-stone-800 bg-clip-text text-transparent border-stone-400',
-      rose: 'bg-gradient-to-r from-rose-800 to-rose-900 bg-clip-text text-transparent border-rose-400',
-      emerald: 'bg-gradient-to-r from-emerald-800 to-emerald-900 bg-clip-text text-transparent border-emerald-400',
-      gray: 'bg-gradient-to-r from-gray-700 to-gray-800 bg-clip-text text-transparent border-gray-400'
-    };
-    return textClasses[color] || textClasses.orange;
+    return themes[color] || themes.orange;
   };
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-serif bg-gradient-to-br from-orange-50 to-amber-100">
-      {/* Hero */}
-      <div className="mb-12">
-        <div className="w-full h-64 md:h-96 lg:h-[500px] bg-gradient-to-br from-orange-400 via-amber-500 to-orange-600 rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden relative">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-widest drop-shadow-2xl z-10">AFAR</h1>
+    <div className="min-h-screen bg-white selection:bg-orange-200">
+      
+      {/* 1. CINEMATIC HERO SECTION */}
+      <section className="relative h-screen w-full overflow-hidden group">
+        <img 
+          src={afarHero} 
+          alt="Afar Desert Landscape" 
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-500 flex flex-col items-center justify-center text-center px-6">
+          <span className="text-white/70 tracking-[0.5em] uppercase text-sm mb-4 block animate-pulse font-serif">
+            Warriors of the Danakil
+          </span>
+          <h1 className="text-7xl md:text-[10rem] font-bold text-white tracking-tighter transition-all duration-700 group-hover:tracking-normal font-serif">
+            {afarData.name}
+          </h1>
+          
+          <p className="max-w-2xl text-xl md:text-2xl text-white/0 group-hover:text-white/90 transition-all duration-700 transform translate-y-10 group-hover:translate-y-0 italic font-light mt-4 font-serif">
+            {afarData.shortDesc}
+          </p>
+          
+          <div className="absolute bottom-10 animate-bounce text-white/40">
+            <span className="text-xs tracking-[0.3em] uppercase">Scroll into the Heat</span>
+          </div>
         </div>
-        <div className="text-center mt-8 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-stone-800 uppercase tracking-widest bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent drop-shadow-2xl">{afarData.name}</h1>
-          <p className="text-xl md:text-2xl text-stone-600 italic mt-4 font-serif">"{afarData.culture}"</p>
-        </div>
-      </div>
+      </section>
 
-      <div className="w-full max-w-7xl mx-auto">
+      {/* 2. FULL WIDTH ALTERNATING SECTIONS */}
+      <div className="w-full">
         {sections.map((section, i) => (
-          <section key={i} className="grid md:grid-cols-2 gap-8 items-center mb-[-3.5rem] md:mb-[-4.5rem] relative">
-            <div className={`p-8 md:p-12 rounded-3xl shadow-2xl min-h-[300px] flex items-center border-4 ${getBgClass(section.color)}`}>
-              <div>
-                <h2 className={`text-3xl md:text-4xl font-black uppercase tracking-widest mb-6 pb-2 border-b-2 ${getTextClass(section.color)}`}>{section.title}</h2>
-                <p className="text-lg md:text-xl leading-relaxed text-stone-800 line-clamp-6">{section.content}</p>
+          <div 
+            key={i} 
+            className={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} min-h-[600px] w-full`}
+          >
+            {/* Text Panel */}
+            <div className={`w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center ${getColorTheme(section.color)}`}>
+              <div className="max-w-md mx-auto">
+                <span className="text-xs font-bold tracking-[0.4em] uppercase opacity-60 mb-2 block font-sans">History 0{i + 1}</span>
+                <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 leading-tight">{section.title}</h2>
+                <div className="h-1 w-16 bg-orange-400 mb-8"></div>
+                <p className="text-lg md:text-xl leading-relaxed font-serif font-light opacity-90 first-letter:text-5xl first-letter:font-bold first-letter:mr-2">
+                  {section.content}
+                </p>
               </div>
             </div>
-            <div className="h-[300px] md:h-[400px] lg:h-[450px] rounded-3xl overflow-hidden shadow-2xl relative -mr-12 md:-mr-16 lg:-mr-20 z-10 border-4 border-white">
+
+            {/* Image Panel */}
+            <div className="w-full md:w-1/2 h-[450px] md:h-auto relative overflow-hidden group">
               <img 
                 src={section.imgSrc} 
                 alt={section.title} 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 hover:rotate-1"
-                onError={(e) => { 
-                  e.target.src = `https://via.placeholder.com/700x450?text=${section.title.replace(/[^\\w]/g, '')}`; 
-                }}
+                className="absolute inset-0 w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                onError={(e) => { e.target.src = `https://via.placeholder.com/1000x1000?text=${section.title}`; }}
               />
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
             </div>
-          </section>
+          </div>
         ))}
       </div>
 
-      {/* CTA */}
-      <div className="text-center mt-20">
-        <a href="/" className="inline-block px-12 py-6 bg-gradient-to-r from-orange-600 to-amber-600 text-white text-xl font-bold rounded-3xl hover:shadow-orange-500/50 shadow-2xl hover:scale-105 transition-all duration-300">
-          ← Back to Home
-        </a>
-      </div>
+      {/* 3. FOOTER */}
+      <footer className="py-24 bg-[#fffaf5] text-center px-6 border-t border-orange-100">
+        <div className="max-w-3xl mx-auto">
+          <div className="h-px w-24 bg-orange-600 mx-auto mb-10" />
+          <p className="text-stone-800 font-serif italic text-2xl md:text-3xl leading-relaxed mb-12">
+            "{afarData.culture}"
+          </p>
+          <a 
+            href="/" 
+            className="inline-block px-12 py-4 border-2 border-orange-900 text-orange-900 text-xs font-bold uppercase tracking-[0.3em] hover:bg-orange-900 hover:text-white transition-all duration-300"
+          >
+            ← Back to Home
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };

@@ -1,24 +1,8 @@
-# Task: Flag-only Navbar + All Nations on Home Page
+# Task Progress: Fix Parse Errors & Update Oromo.jsx Layout
 
-## Steps:
-[x] 1. Read NationTemplate.jsx content ✓
-[x] 2. Rewrite Navbar.jsx to flags-only + Contact ✓
-[x] 3. Update Header.jsx (remove flags) ✓
-[x] 4. Update App.jsx ✓
-[x] 5. Create missing nation pages ✓
-[x] 6. Update Home.jsx ✓
-[x] 7. Navbar flag spacing/height improved ✓
-[ ] 8. Delete unused pages
+## Completed:
+- [x] Fixed parse error in Nnp.jsx (added missing comma in Dorze Beehives section)
+- [x] Fixed parse error in Afar.jsx (added missing comma in Afar Language section)
+- [x] Verified no other parse errors via search_files
 
-
-
-
-
-[ ] 3. Update Header.jsx (remove flags)
-[ ] 4. Update App.jsx (routes cleanup + add missing nations)
-[ ] 5. Create missing nation pages (Afar, Nnp, Gab, Gumuz)
-[ ] 6. Update Home.jsx (nations grid + merge EthnicGroups/History/Culture content)
-[ ] 7. Delete unused pages (EthnicGroups, History, Culture)
-[ ] 8. Test: npm run dev, check desktop/mobile navbar, home nations grid, all links
-[ ] 9. attempt_completion
-
+## Completed:\n- [x] Refactored Oromo.jsx to match Nnp/Afar structure (multiline sections, getBgClass/getTextClass, consistent grid with space-y-16 gaps for equal spacing, parallel text/image layout)\n\n**All tasks complete.**
