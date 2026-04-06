@@ -1,7 +1,10 @@
-import React from 'react';
-// Only import what you actually have as unique local files
+import React from 'react';// Only import what you actually have as unique local files
 import tigrayHero from '../../assets/tig.png'; 
 import cultureImage from '../../assets/cultu.png';
+import aksumligacy from '../../assets/aksumligacy.png';
+import churchimage from '../../assets/church.png';
+import tigrayhero from '../../assets/ras alula.png';
+import beutifulimage from '../../assets/feshila.png';
 
 const Tigrayan = () => {
   const tigrayanData = {
@@ -14,8 +17,8 @@ const Tigrayan = () => {
     {
       title: 'Aksumite Legacy',
       content: "Direct descendants of the Aksumite Kingdom, one of the ancient world's four great powers. As a coin-minting superpower trading with Rome and India, Aksum introduced Ge'ez Christianity in the 4th century.",
-      // Using an actual image of the Aksum Obelisks
-      imgSrc: 'https://images.unsplash.com/photo-1605142859862-978be7eba909?q=80&w=1200&auto=format&fit=crop', 
+      // actual image of the Aksum Obelisks
+      imgSrc: aksumligacy, 
       color: 'blue'
     },
     {
@@ -27,21 +30,21 @@ const Tigrayan = () => {
     {
       title: 'Rock-Hewn Churches',
       content: "Tigray is home to over 120 ancient churches carved directly into monolithic cliffs. From the sky-high Abuna Yemata Guh to Gheralta, these spaces have been guarded for a millennium.",
-      // Image representing the famous Gheralta mountains/cliffs
-      imgSrc: 'https://images.unsplash.com/photo-1547447134-cd3f5c716030?q=80&w=1200&auto=format&fit=crop', 
+      // Image representing the famous Gheralta rock-hewn churches
+      imgSrc: churchimage,
       color: 'indigo'
     },
     {
       title: 'Adwa & Resistance',
       content: "A bastion of independence. From Ras Alula Abba Nega to the warriors of the Battle of Adwa in 1896, Tigrayan military brilliance was instrumental in preserving African sovereignty.",
-      imgSrc: tigrayHero, // Using your local asset here
+      imgSrc: tigrayhero, // Using your local asset here
       color: 'slate'
     },
     {
       title: 'Ashenda Festival',
       content: "A vibrant cultural festival unique to the women of Tigray. Young women adorn themselves with 'Ashenda' grass and traditional jewelry, filling the streets with song and dance.",
       // Image representing vibrant Ethiopian cultural celebration
-      imgSrc: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1200&auto=format&fit=crop',
+      imgSrc: beutifulimage,
       color: 'sky'
     }
   ];
