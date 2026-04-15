@@ -10,7 +10,7 @@ function EthnicCard({ name, description, imageUrl, onClick }) {
         <div className="p-4 md:p-6 flex-grow flex flex-col">
         <h3 className="text-xl md:text-2xl font-bold text-stone-800 mb-2 md:mb-3 group-hover:text-emerald-700 transition-colors">{name}</h3>
         <p className="text-stone-600 leading-relaxed flex-grow text-sm md:text-base">{description}</p>
-<button className="text-emerald-600 hover:text-emerald-800 font-semibold mt-3 md:mt-4 self-start text-sm md:text-base bg-transparent border-none cursor-pointer p-0 text-left">
+  <button className="text-emerald-600 hover:text-emerald-800 font-semibold mt-3 md:mt-4 self-start text-sm md:text-base bg-transparent border-none cursor-pointer p-0 text-left">
           Read More &rarr;
         </button>
       </div>
