@@ -18,6 +18,5 @@ dist-ssr
 .DS_Store
 *.suo
 *.ntvs*
-*.njsproj
-*.sln
+*.njsproj*.sln
 *.sw?
