@@ -1,4 +1,4 @@
-# Task Progress: Fix Parse Errors & Update Oromo.jsx Layout
+ # Task Progress: Fix Parse Errors & Update Oromo.jsx Layout
 
 ## Completed:
 - [x] Fixed parse error in Nnp.jsx (added missing comma in Dorze Beehives section)
